@@ -1,0 +1,28 @@
+.person{
+    width: 600px;
+    text-align: center;
+    border: 5px black solid;
+    z-index: 2;
+    display: block;
+    position: absolute;
+}
+img{
+    width: 500px;
+}
+
+.black{
+    background-color: black;
+    width: 1500px;
+    height: 100px;
+    z-index: 1;
+  
+
+}
+.yellow{
+    background-color: yellow;
+    width: 1500px;
+    height: 100px;
+    z-index: 1;
+    
+
+}
