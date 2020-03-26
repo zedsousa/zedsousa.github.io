@@ -1,2 +1,2 @@
 <h1>SITE</h1>
-<img src="images/person.jpg"></img>
+<img src="images/person.jpg">
