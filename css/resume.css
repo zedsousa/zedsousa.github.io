@@ -179,4 +179,8 @@ a.btn {
 a:hover, a:focus, a:active {
   color: #824027;
 }
-
+ .curso{
+  border-radius: 0.45rem;  
+  padding: 10px;
+  box-shadow:  1px 2px 3px #ccc;
+ }
