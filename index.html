@@ -76,7 +76,7 @@
         <div class="subheading mb-5">Natal · Rio Grande do Norte ·
           <a href="mailto:name@email.com">jose.sousa1251@gmail.com</a>
         </div>
-        <p class="lead mb-5">Estudante de Tecnologia da Informação na UFRN.
+        <p class="lead mb-5" style="width:75%">Estudante de Tecnologia da Informação na UFRN.
           Bolsista no projeto de pesquisa Smart Metrópolis. 
           Entusiasta em ciência de dados e visão computacional. </p>
         <div class="social-icons">
@@ -93,64 +93,11 @@
             <i class="fab fa-medium"></i>
           </a>
         </div>
+
       </div>
     </section>
 
     <hr class="m-0">
-
-    <!--section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-        <h2 class="mb-5">Experiência</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Web Developer Júnior</h3>
-            <div class="subheading mb-3">Intelitec Solutions</div>
-            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">March 2013 - Present</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Web Developer</h3>
-            <div class="subheading mb-3">Intelitec Solutions</div>
-            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">December 2011 - March 2013</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Junior Web Designer</h3>
-            <div class="subheading mb-3">Shout! Media Productions</div>
-            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">July 2010 - December 2011</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Web Design Intern</h3>
-            <div class="subheading mb-3">Shout! Media Productions</div>
-            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2008 - June 2010</span>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <hr class="m-0"-->
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
       <div class="w-100">
@@ -190,25 +137,25 @@
 
         <div class="subheading mb-3">Linguagens de programação &amp; Ferramentas</div>
         <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
+          <li class="list-inline-item"onmouseover="setTechName('HTML 5')" onmouseout="setTechName('⠀⠀⠀⠀⠀⠀⠀⠀')">
             <i class="fab fa-html5"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" onmouseover="setTechName('CSS 3')"onmouseout="setTechName('⠀⠀⠀⠀⠀⠀⠀⠀')">
             <i class="fab fa-css3-alt"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" onmouseover="setTechName('Java Script')"onmouseout="setTechName('⠀⠀⠀⠀⠀⠀⠀⠀')">
             <i class="fab fa-js-square"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" onmouseover="setTechName('Docker')"onmouseout="setTechName('⠀⠀⠀⠀⠀⠀⠀⠀')">
             <i class="fab fa-docker"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" onmouseover="setTechName('Python')"onmouseout="setTechName('⠀⠀⠀⠀⠀⠀⠀⠀')">
             <i class="fab fa-python"></i>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" onmouseover="setTechName('Java')"onmouseout="setTechName('⠀⠀⠀⠀⠀⠀⠀⠀')">
             <i class="fab fa-java"></i>
           </li>
-          <li class="list-inline-item">
+          <!--li class="list-inline-item">
             <i class="fab fa-react"></i>
           </li>
           <li class="list-inline-item">
@@ -216,9 +163,10 @@
           </li>
           <li class="list-inline-item">
             <i class="fab fa-npm"></i>
-          </li>
+          </li-->
         </ul>
-
+        <p class="lead mb-5" id="tech_name">⠀⠀⠀⠀⠀⠀⠀⠀</p>
+       
         <!--div class="subheading mb-3">Fluxo de Trabalho</div>
         <ul class="fa-ul mb-0">
           <li>
@@ -232,6 +180,7 @@
             Desenvolvimento ágil &amp; Scrum</li>
         </ul-->
       </div>
+     
     </section>
 
     <hr class="m-0">
@@ -241,7 +190,7 @@
         <h2 class="mb-5">Projetos</h2>
         <div class="row">
           <div class="col-sm-6">
-            <div class="card">
+            <div class="card" style="margin-bottom: 1.5em;">
               <div class="card-body">
                 <h5 class="card-title">Título especial</h5>
                 <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
@@ -250,7 +199,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="card">
+            <div class="card" style="margin-bottom: 1.5em;">
               <div class="card-body">
                 <h5 class="card-title">Título especial</h5>
                 <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
@@ -259,10 +208,10 @@
             </div>
           </div>
         </div>
-      </br>
+      
       <div class="row">
         <div class="col-sm-6">
-          <div class="card">
+          <div class="card" style="margin-bottom: 1.5em;">
             <div class="card-body">
               <h5 class="card-title">Título especial</h5>
               <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
@@ -271,7 +220,7 @@
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="card">
+          <div class="card" style="margin-bottom: 1.5em;">
             <div class="card-body">
               <h5 class="card-title">Título especial</h5>
               <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
@@ -290,7 +239,7 @@
         <h2 class="social-icons">Tutoriais</h2>
         <div class="row">
           <div class="col-sm-6">
-            <div class="card">
+            <div class="card" style="margin-bottom: 1.5em;">
               <div class="card-body">
                 <h5 class="card-title">Título especial</h5>
                 <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
@@ -299,7 +248,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="card">
+            <div class="card" style="margin-bottom: 1.5em;">
               <div class="card-body">
                 <h5 class="card-title">Título especial</h5>
                 <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
@@ -308,10 +257,10 @@
             </div>
           </div>
         </div>
-      </br>
+    
         <div class="row">
           <div class="col-sm-6">
-            <div class="card">
+            <div class="card" style="margin-bottom: 1.5em;">
               <div class="card-body">
                 <h5 class="card-title">Título especial</h5>
                 <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
@@ -320,7 +269,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="card">
+            <div class="card" style="margin-bottom: 1.5em;">
               <div class="card-body">
                 <h5 class="card-title">Título especial</h5>
                 <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
@@ -345,6 +294,12 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
+
+  <script>
+    function setTechName(name){
+      document.getElementById("tech_name").innerHTML = name;
+    }
+  </script>
 
 </body>
 
