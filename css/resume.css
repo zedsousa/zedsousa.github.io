@@ -180,7 +180,11 @@ a:hover, a:focus, a:active {
   color: #824027;
 }
  .curso{
-  border-radius: 0.45rem;  
- 
-  box-shadow:  1px 2px 3px #ccc;
+  
+  background-color: #fff;
+  border: solid 1px #fff;
+  box-shadow: 4px 4px 20px 0 rgba(120,135,182,.1);
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 18.8rem;
  }
