@@ -24,29 +24,23 @@ function gerar_estatisticas(){
     console.log(dados);
     
     var compra25Text = document.createTextNode(dados[0]['75%']);
-    compra25.removeChild(compra25.childNodes[0])
-    compra25.appendChild(compra25Text);
+    compra25.replaceChild(compra25Text, compra25.childNodes[0]);
 
     var compra50Text = document.createTextNode(dados[0]['50%']);
-    compra50.removeChild(compra50.childNodes[0])
-    compra50.appendChild(compra50Text);
+    compra50.replaceChild(compra50Text, compra50.childNodes[0]);
 
     var compra75Text = document.createTextNode(dados[0]['25%']);
-    compra75.removeChild(compra75.childNodes[0])
-    compra75.appendChild(compra75Text);
+    compra75.replaceChild(compra75Text, compra75.childNodes[0]);
 
 
     var venda25Text = document.createTextNode(dados[2]['75%']);
-    venda25.removeChild(venda25.childNodes[0])
-    venda25.appendChild(venda25Text);
+    venda25.replaceChild(venda25Text, venda25.childNodes[0]);
 
     var venda50Text = document.createTextNode(dados[2]['50%']);
-    venda50.removeChild(venda50.childNodes[0])
-    venda50.appendChild(venda50Text);
+    venda50.replaceChild(venda50Text, venda50.childNodes[0]);
 
     var venda75Text = document.createTextNode(dados[2]['25%']);
-    venda75.removeChild(venda75.childNodes[0])
-    venda75.appendChild(venda75Text);
+    venda75.replaceChild(venda75Text, venda75.childNodes[0]);
     
 
 }

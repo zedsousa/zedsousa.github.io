@@ -28,8 +28,8 @@
       <div class="card-body p-0">
         <!-- Nested Row within Card Body -->
         <div class="row">
-          <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-          <div class="col-lg-7">
+          
+          <div class="col-lg-12">
             <div class="p-5">
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Insira os dados da ação.</h1>
@@ -49,7 +49,95 @@
                 <hr>
               </form>
 
+              <div class="form-group row">
+                
+            <div class="col-xl-4 col-lg-6">
               <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Compra</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="myPieChart"></canvas>
+                  </div>
+                  <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-primary"></i> R$7,10
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-info"></i> R$7,00
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-success"></i> R$6,90
+                    </span>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Venda</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="myPieChartVenda"></canvas>
+                  </div>
+                  <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-primary"></i> R$7,40
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-info"></i> R$7,50
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-success"></i> R$7,60
+                    </span>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+                
+
+              <div class="card shadow mb-4 col-lg-6">
+
+                
+                <!-- Card Header - Accordion -->
+                <a href="#collapseCardVenda" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardVenda">
+                  <h6 class="m-0 font-weight-bold text-primary">Venda</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show " id="collapseCardVenda">
+                  <div class="card-body">
+                    <h4 class="small font-weight-bold venda75" id="venda75">R$0,00 <span class="float-right">25%</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold venda50" id="venda50">R$0,00 <span class="float-right">50%</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <h4 class="small font-weight-bold venda25" id="venda25">R$0,00 <span class="float-right">25%</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+
+
+              <div class="card shadow mb-4 col-lg-6">
                 <!-- Card Header - Accordion -->
                 <a href="#collapseCardCompra" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardCompra">
                   <h6 class="m-0 font-weight-bold text-primary">Compra</h6>
@@ -57,49 +145,28 @@
                 <!-- Card Content - Collapse -->
                 <div class="collapse show" id="collapseCardCompra">
                   <div class="card-body">
-                    <h4 class="small font-weight-bold" id="compra25">R$7,10 <span class="float-right">25%</span></h4>
+                   
+
+                    <h4 class="small font-weight-bold compra75" id="compra75">R$0,00 <span class="float-right">25%</span></h4>
                     <div class="progress mb-4">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <h4 class="small font-weight-bold" id="compra50">R$7,00 <span class="float-right">50%</span></h4>
+
+                    <h4 class="small font-weight-bold compra50" id="compra50">R$0,00 <span class="float-right">50%</span></h4>
                     <div class="progress mb-4">
                       <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <h4 class="small font-weight-bold" id="compra75">R$6,90 <span class="float-right">25%</span></h4>
+                   
+                    <h4 class="small font-weight-bold compra25" id="compra25">R$0,00 <span class="float-right">25%</span></h4>
                     <div class="progress mb-4">
-                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
   
                 </div>
               </div>
 
-              <div class="card shadow mb-4">
-                <!-- Card Header - Accordion -->
-                <a href="#collapseCardVenda" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardVenda">
-                  <h6 class="m-0 font-weight-bold text-primary">Venda</h6>
-                </a>
-                <!-- Card Content - Collapse -->
-                <div class="collapse show" id="collapseCardVenda">
-                  <div class="card-body">
-                    <h4 class="small font-weight-bold" id="venda25">R$7,30 <span class="float-right">25%</span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold" id="venda50">R$7,40 <span class="float-right">50%</span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold" id="venda75">R$7,50 <span class="float-right">25%</span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-  
-                </div>
-              </div>
-
-            </div>
+                          </div>
           </div>
         </div>
       </div>
@@ -116,6 +183,11 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
