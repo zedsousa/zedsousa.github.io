@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -26,6 +26,8 @@
 
     <div class="card o-hidden border-0 shadow-lg my-5">
       <div class="card-body p-0">
+        
+
         <!-- Nested Row within Card Body -->
         <div class="row">
           
@@ -48,127 +50,102 @@
                 </a>
                 <hr>
               </form>
+          <div class="row">
+            <div class="card shadow mb-4 col-lg-5">
 
-              <div class="form-group row">
                 
-            <div class="col-xl-4 col-lg-6">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Compra</h6>
-                </div>
-                <!-- Card Body -->
+              <!-- Card Header - Accordion -->
+              <a href="#collapseCardVenda" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardVenda">
+                <h6 class="m-0 font-weight-bold text-primary">Venda</h6>
+              </a>
+              <!-- Card Content - Collapse -->
+              <div class="collapse show " id="collapseCardVenda">
                 <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart"></canvas>
+                  <h4 class="small font-weight-bold venda75" id="venda75">R$0,00 <span class="float-right">75%</span></h4>
+                  <div class="progress mb-4">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> R$7,10
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> R$7,00
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> R$6,90
-                    </span>
-                   
+                  <h4 class="small font-weight-bold venda50" id="venda50">R$0,00 <span class="float-right">50%</span></h4>
+                  <div class="progress mb-4">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  <h4 class="small font-weight-bold venda25" id="venda25">R$0,00 <span class="float-right">25%</span></h4>
+                  <div class="progress mb-4">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <div class="col-xl-4 col-lg-6">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Venda</h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChartVenda"></canvas>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> R$7,40
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> R$7,50
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> R$7,60
-                    </span>
-                    
-                  </div>
-                </div>
               </div>
             </div>
 
 
+            <div class="card shadow mb-4 col-lg-5">
+              <!-- Card Header - Accordion -->
+              <a href="#collapseCardCompra" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardCompra">
+                <h6 class="m-0 font-weight-bold text-primary">Compra</h6>
+              </a>
+              <!-- Card Content - Collapse -->
+              <div class="collapse show" id="collapseCardCompra">
+                <div class="card-body">
+                 
+
+                  <h4 class="small font-weight-bold compra75" id="compra75">R$0,00 <span class="float-right">75%</span></h4>
+                  <div class="progress mb-4">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+
+                  <h4 class="small font-weight-bold compra50" id="compra50">R$0,00 <span class="float-right">50%</span></h4>
+                  <div class="progress mb-4">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                 
+                  <h4 class="small font-weight-bold compra25" id="compra25">R$0,00 <span class="float-right">25%</span></h4>
+                  <div class="progress mb-4">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          
+
                 
 
-              <div class="card shadow mb-4 col-lg-6">
+              
 
-                
-                <!-- Card Header - Accordion -->
-                <a href="#collapseCardVenda" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardVenda">
-                  <h6 class="m-0 font-weight-bold text-primary">Venda</h6>
-                </a>
-                <!-- Card Content - Collapse -->
-                <div class="collapse show " id="collapseCardVenda">
-                  <div class="card-body">
-                    <h4 class="small font-weight-bold venda75" id="venda75">R$0,00 <span class="float-right">25%</span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold venda50" id="venda50">R$0,00 <span class="float-right">50%</span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    
-                    <h4 class="small font-weight-bold venda25" id="venda25">R$0,00 <span class="float-right">25%</span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-  
-                </div>
-              </div>
-
-
-              <div class="card shadow mb-4 col-lg-6">
-                <!-- Card Header - Accordion -->
-                <a href="#collapseCardCompra" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardCompra">
-                  <h6 class="m-0 font-weight-bold text-primary">Compra</h6>
-                </a>
-                <!-- Card Content - Collapse -->
-                <div class="collapse show" id="collapseCardCompra">
-                  <div class="card-body">
-                   
-
-                    <h4 class="small font-weight-bold compra75" id="compra75">R$0,00 <span class="float-right">25%</span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                    <h4 class="small font-weight-bold compra50" id="compra50">R$0,00 <span class="float-right">50%</span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                   
-                    <h4 class="small font-weight-bold compra25" id="compra25">R$0,00 <span class="float-right">25%</span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-  
-                </div>
-              </div>
-
-                          </div>
+          </div>
           </div>
         </div>
+        <div class="col-lg-12 mb-4">
+
+          <!-- Illustrations -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Explicação</h6>
+            </div>
+            <div class="card-body">
+              <div class="text-center">
+                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="">
+              </div>
+              <p>Com base nos dados obtidos no site <a href="https://www.infomoney.com.br/">InfoMoney</a> da ação selecionada desde o dia <a href="#">20</a> de Março, foi feita uma análise utilizando a biblioteca pandas com a linguagem python, que resultou nos seguintes resultados:
+              </p>
+
+              <p>Em 75% dos dias analisado a ação teve uma valorização acima de <a href="#">2%</a> e uma devalorização acima de <a href="#">3%</a>.</p>
+              <p>Em 50% dos dias analisado a ação teve uma valorização acima de <a href="#">4%</a> e uma devalorização acima de <a href="#">5%</a>.</p>
+              <p>Em 25% dos dias analisado a ação teve uma valorização acima de <a href="#">8%</a> e uma devalorização acima de <a href="#">8%</a>.</p>
+
+            </div>
+          </div>
+
+          <!-- Approach -->
+          
+
+        </div>
+      </div>
+
+    </div>
       </div>
     </div>
 

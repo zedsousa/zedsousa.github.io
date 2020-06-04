@@ -483,7 +483,7 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -4324,6 +4324,8 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
+  margin:2.4rem;
+  padding: 0rem;
 }
 
 .card > hr {
