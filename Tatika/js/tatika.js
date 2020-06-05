@@ -18,6 +18,16 @@ function gerar_estatisticas(){
     var venda50 = document.querySelector("#venda50");
     var venda75 = document.querySelector("#venda25");
 
+    var up25 = document.querySelector("#up75");
+    var up50 = document.querySelector("#up50");
+    var up75 = document.querySelector("#up25");
+
+    var down25 = document.querySelector("#down75");
+    var down50 = document.querySelector("#down50");
+    var down75 = document.querySelector("#down25");
+
+    var acaoNode = document.querySelector("#acao");
+
 
 
     dados= JSON.parse(JSON.stringify(response));
@@ -43,6 +53,27 @@ function gerar_estatisticas(){
     venda75.replaceChild(venda75Text, venda75.childNodes[0]);
     
 
+    var down25Text = document.createTextNode(Math.round(dados[1]['25%'])+"%");
+    down25.replaceChild(down25Text, down25.childNodes[0]);
+
+    var down50Text = document.createTextNode(Math.round(dados[1]['50%'])+"%");
+    down50.replaceChild(down50Text, down50.childNodes[0]);
+
+    var down75Text = document.createTextNode(Math.round(dados[1]['75%'])+"%");
+    down75.replaceChild(down75Text, down75.childNodes[0]);
+
+    var up25Text = document.createTextNode(Math.round(dados[3]['25%'])+"%");
+    up25.replaceChild(up25Text, up25.childNodes[0]);
+
+    var up50Text = document.createTextNode(Math.round(dados[3]['50%'])+"%");
+    up50.replaceChild(up50Text, up50.childNodes[0]);
+
+    var up75Text = document.createTextNode(Math.round(dados[3]['75%'])+"%");
+    up75.replaceChild(up75Text, up75.childNodes[0]);
+
+
+    var acaoText = document.createTextNode(acao);
+    acaoNode.replaceChild(acaoText, acaoNode.childNodes[0]);
 }
 
 
