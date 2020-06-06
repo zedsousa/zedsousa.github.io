@@ -30,3 +30,14 @@
 
 })(jQuery); // End of use strict
 
+function changeArrow(){
+  arrow = document.getElementById('aluraArrow');
+  if(arrow.className=='fas fa-chevron-right'){
+    arrow.className = 'fas fa-chevron-down';
+  }
+  else{
+    arrow.className = 'fas fa-chevron-right';
+  }
+  
+}
+

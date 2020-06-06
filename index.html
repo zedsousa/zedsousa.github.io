@@ -123,8 +123,8 @@
         </div>
       </br>
         <h3 class="mb-0">Alura</h3>
-        <a href="#collapseCardAlura" class="d-block col-xl-9 card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardCompra">
-          <h6 class="m-0 subheading  text-primary">Formação Data Science</h6>
+        <a href="#collapseCardAlura" onclick="changeArrow()" class="d-block col-xl-9 card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardCompra">
+          <span class="m-0 subheading  text-primary">Formação Data Science </span><i id="aluraArrow" class="fas fa-chevron-right"></i> 
         </a>
         
         <div class="collapse " id="collapseCardAlura">
@@ -203,7 +203,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
+  <script src="js/resume.js"></script>
 
   <script>
     function setTechName(name){

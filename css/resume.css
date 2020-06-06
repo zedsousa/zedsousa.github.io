@@ -204,3 +204,28 @@ a:hover, a:focus, a:active {
 .d-block{
   margin-bottom: 1rem;
 }
+
+.sidebar .nav-item .nav-link[data-toggle="collapse"].collapsed::after {
+  content: '\f105';
+}
+
+.card .card-header[data-toggle="collapse"].collapsed {
+  border-radius: 0.35rem;
+}
+
+.card .card-header[data-toggle="collapse"].collapsed::after {
+  content: '\f105';
+}
+
+.fa-chevron-right{
+  color: 868e96;
+  float: right;
+  padding: 0.7rem;
+}
+
+
+.fa-chevron-down{
+  color: 868e96;
+  float: right;
+  padding: 0.7rem;
+}
