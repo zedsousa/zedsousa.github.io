@@ -10,6 +10,7 @@ function gerar_estatisticas(){
     xmlHttp.send(null);
     var variation = JSON.parse(xmlHttp.response);
     
+    var fechamento = document.querySelector("#fechamento");
 
     var compra25 = document.querySelector("#compra75");
     var compra50 = document.querySelector("#compra50");
@@ -33,8 +34,16 @@ function gerar_estatisticas(){
 
     dados= JSON.parse(JSON.stringify(variation));
     console.log(dados);
+
+    xmlHttp.open("GET", endpoint+ "get-close/"+acao, false);
+    xmlHttp.send(null);
+    var close = JSON.parse(xmlHttp.response);
+
+
    
-    
+    var fechamentoText = document.createTextNode(close);
+    fechamento.replaceChild(fechamentoText, fechamento.childNodes[0]);
+
     var compra25Text = document.createTextNode(dados[0]['75%'] +" (- "+Math.round(dados[1]['25%'])+"%)");
     compra25.replaceChild(compra25Text, compra25.childNodes[0]);
 
