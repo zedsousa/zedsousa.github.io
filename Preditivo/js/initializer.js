@@ -7,9 +7,9 @@ var month = date.getMonth();
 var hours = date.getHours();
 
 document.getElementById("year").value = year;
-document.getElementById("month").value = month;
+document.getElementById("month").value = 3;
 document.getElementById("shift").value = "day";
-document.getElementById("category").value = "default";
+document.getElementById("category").value = "colisao_frontal";
 /*
 //cartao programa
 var xmlHttp = new XMLHttpRequest();
