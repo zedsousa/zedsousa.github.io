@@ -1,4 +1,5 @@
-var endpoint = "http://localhost:8080/";
+//var endpoint = "http://localhost:8080/";
+var endpoint = "http://localhost:3883/";
 
 function gerarGraficoPizza(dia) {
     var date = new Date();
@@ -17,7 +18,8 @@ function gerarGraficoPizza(dia) {
 
 
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", endpoint+"preditivo/get-statistics/"+category+"/hours_of_day", false); // false for synchronous request
+    //xmlHttp.open("GET", endpoint+"preditivo/get-statistics/"+category+"/hours_of_day", false); // false for synchronous request
+    xmlHttp.open("GET", endpoint+"get_statistics/"+category+"/hours_of_day", false); // false for synchronous request
     xmlHttp.send(null);
     var statistic = JSON.parse(xmlHttp.response);
     var dias = statistic.dias;
@@ -91,7 +93,9 @@ function gerarGraficoBarras(){
     // Gráfico 1
 
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", endpoint+"preditivo/get-statistics/"+category+"/days_of_week", false); // false for synchronous request
+    //xmlHttp.open("GET", endpoint+"preditivo/get-statistics/"+category+"/days_of_week", false); // false for synchronous request
+    xmlHttp.open("GET", endpoint+"get_statistics/"+category+"/days_of_week", false); // false for synchronous request
+
     xmlHttp.send(null);
     var statistic = JSON.parse(xmlHttp.response);
     console.log(statistic);

@@ -1,4 +1,6 @@
-var endpoint = "http://localhost:8080/";
+//var endpoint = "http://localhost:8080/";
+var endpoint = "http://localhost:3883/";
+
 var setores, predicao, municipios, mapa_normal;
 var tipo_mapa = 'roads';
 var mapPredicao = L.geoJson();
@@ -57,6 +59,14 @@ function setShift(){
     getGeojson();
 }
 
+function gerar_predicao(){
+    var loading = document.querySelector("#preload");
+    loading.style.display = 'block';
+    gerarGraficoPizza();
+    gerarGraficoBarras();
+    getGeojson();
+    loading.style.display = 'none';
+}
 
 
 
@@ -77,17 +87,20 @@ function getGeojson() {
     var xmlHttp = new XMLHttpRequest();
 
 
-    xmlHttp.open("GET", endpoint+"preditivo/get-prediction/"+category+"@"+shift+"/"+year+"/"+month+"/map", false); // false for synchronous request
+    //xmlHttp.open("GET", endpoint+"preditivo/get-prediction/"+category+"@"+shift+"/"+year+"/"+month+"/map", false); // false for synchronous request
+    xmlHttp.open("GET", endpoint+"new_get_contour/"+category+"@"+shift+"/"+year+"/"+month+"/map", false); // false for synchronous request
     xmlHttp.send(null);
     var response2 = JSON.parse(xmlHttp.response);
 
-    xmlHttp.open("GET", endpoint+ "preditivo/get-prediction/"+category+"@"+shift+"/"+year+"/"+month+"/roads", false); // false for synchronous request
+    //xmlHttp.open("GET", endpoint+ "preditivo/get-prediction/"+category+"@"+shift+"/"+year+"/"+month+"/roads", false); // false for synchronous request
+    xmlHttp.open("GET", endpoint+ "new_get_contour/"+category+"@"+shift+"/"+year+"/"+month+"/roads", false); // false for synchronous request
     xmlHttp.send(null);
     var response = JSON.parse(xmlHttp.response);
 
 
 
-    xmlHttp.open("GET", endpoint+"preditivo/get-rank/"+category+"@"+shift+"/"+year+"/"+month+"/segmentos", false); // false for synchronous request
+    //xmlHttp.open("GET", endpoint+"preditivo/get-rank/"+category+"@"+shift+"/"+year+"/"+month+"/segmentos", false); // false for synchronous request
+    xmlHttp.open("GET", endpoint+"get_rank/"+category+"@"+shift+"/"+year+"/"+month+"/segmentos", false); // false for synchronous request
     xmlHttp.send(null);
     var response3 = JSON.parse(xmlHttp.response);
 

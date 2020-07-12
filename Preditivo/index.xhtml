@@ -43,6 +43,10 @@
 
 	<div id="dashboard-body">
 		<div id="map"></div>
+		<div id='preload'>
+			<span class='circle'></span>
+			<span class='smcircle'></span>
+		</div>
 		<div id="marker" title="Marker"></div>
 		<div id="popup" title="Welcome to OpenLayers"></div>
 
@@ -55,7 +59,7 @@
 				<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				    <div class="col-lg-6 col-sm-12 padding-0" >
 				    	<div class="padding-2">
-					    	<button id="option-menu" type="button" class="btn btn-dark col-12" onclick="openMenu(), gerarGraficoPizza()">
+					    	<button id="option-menu" type="button" class="btn btn-dark col-12" onclick="openMenu()">
 					  			Menu
 					  		</button>
 				    	</div>
@@ -76,7 +80,7 @@
 						<div class="card-body row">
 							<div class="col-lg-6 col-sm-12" id="margin-0">
 								<label for="month">MÊS</label>
-								<select class="form-control" name="month" id="month" onChange="getGeojson()">
+								<select class="form-control" name="month" id="month" >
 									<option value="1">Janeiro</option>
 									<option value="2">Fevereiro</option>
 									<option value="3">Março</option>
@@ -94,7 +98,7 @@
 							<div class="col-lg-6 col-sm-12">
 								<div class="form-group">
 									<label for="year">ANO</label> <select class="form-control"
-										name="year" id="year" onChange="getGeojson()">
+										name="year" id="year" >
 										<option value="2016">2016</option>
 										<option value="2017">2017</option>
 										<option value="2018">2018</option>
@@ -127,7 +131,7 @@
 								<div class="form-group">
 									<label for="category">CATEGORIA</label> <select
 										class="form-control" name="category" id="category"
-										onChange="getGeojson()">
+										>
 										<option value="default">Selecione uma categoria</option>
 										<option value="incendio">Incêndio</option>
 										<option value="tombamento">Tombamento</option>
@@ -143,17 +147,21 @@
 								</select>
 								</div>
 							</div>
-						</div>
-						<div class="col-lg-6 col-sm-12">
-							<div class="form-group">
-								<label for="tipo_mapa">Tipo do mapa</label> <select
-									class="form-control" name="tipoa_mapa" id="tipo_mapa"
-									onChange="getGeojson()">
-								<option value="roads">Rodovias</option>
-								<option value="mapa_normal">Estado</option>
-							</select>
+							<div class="col-lg-6 col-sm-12">
+								<div class="form-group">
+									<label for="tipo_mapa">Tipo do mapa</label> <select
+										class="form-control" name="tipoa_mapa" id="tipo_mapa"
+										onChange="getGeojson()">
+									<option value="roads">Rodovias</option>
+									<option value="mapa_normal">Estado</option>
+								</select>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-12" >
+								<button type="button" onclick="gerar_predicao()" class="btn btn-primary">Gerar predição</button>
 							</div>
 						</div>
+						
 						<label for="category">Ranking</label>
 						<ul class="list-group">
 
