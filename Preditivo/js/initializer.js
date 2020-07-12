@@ -1,6 +1,5 @@
-var endpoint = "http://localhost:8084/";
-
-
+//var endpoint = "http://localhost:8080/";
+endpoint = ENDPOINT_CAMPUS_SEGURO;
 
 var date = new Date();
 var year = date.getFullYear();
@@ -11,8 +10,7 @@ document.getElementById("year").value = year;
 document.getElementById("month").value = month;
 document.getElementById("shift").value = "day";
 document.getElementById("category").value = "default";
-
-
+/*
 //cartao programa
 var xmlHttp = new XMLHttpRequest();
 //xmlHttp.open( "GET", endpoint + "/ocorrencia/retorna-cartao-programa", false );
@@ -51,5 +49,6 @@ for (var i =0; i<24; i++){
 
 	}
 
-}
+}*/
+
 getGeojson();

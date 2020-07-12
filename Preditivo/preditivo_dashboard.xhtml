@@ -9,9 +9,10 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	
+
 	<title>Predições</title>
-	
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -33,6 +34,7 @@
 </head>
 
 <body id="bodyHtml" class="noselect-text">
+
 	
 	<f:metadata>
 		<f:viewParam name="id" value="#{authController.enuns}" />
@@ -46,19 +48,19 @@
 
 		<a href="/#{endpoint.smartcampus_path}/telas/index.xhtml"
 			class="btn btn-primary voltar-button">Voltar</a>
+		<div class="map_legend"><p class="signal_legend">+</p></div>
 
 		<div id="right-sidebar">
 			<div class="margin-5">
 				<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				    <div class="col-lg-6 col-sm-12" id="padding-0">
+				    <div class="col-lg-6 col-sm-12 padding-0" >
 				    	<div class="padding-2">
 					    	<button id="option-menu" type="button" class="btn btn-dark col-12" onclick="openMenu()">
 					  			Menu
 					  		</button>
 				    	</div>
-				      	
 				    </div>
-				    <div class="col-lg-6 col-sm-12" id="padding-0">
+				    <div class="col-lg-6 col-sm-12 padding-0" >
 				    	<div class="padding-2">
 					      	<button id="option-estatisticas" type="button" class="btn btn-outline-dark col-12" onclick="openEstatisticas()">
 					  			Estatísticas
@@ -67,24 +69,26 @@
 				    </div>
 				</nav>
 
+
 				<div id="menu">
+
 					<div class="card margin-top-5">
 						<div class="card-body row">
 							<div class="col-lg-6 col-sm-12" id="margin-0">
 								<label for="month">MÊS</label>
 								<select class="form-control" name="month" id="month" onChange="getGeojson()">
-									<option value="0">Janeiro</option>
-									<option value="1">Fevereiro</option>
-									<option value="2">Março</option>
-									<option value="3">Abril</option>
-									<option value="4">Maio</option>
-									<option value="5">Junho</option>
-									<option value="6">Julho</option>
-									<option value="7">Agosto</option>
-									<option value="8">Setembro</option>
-									<option value="9">Outubro</option>
-									<option value="10">Novembro</option>
-									<option value="11">Dezembro</option>
+									<option value="1">Janeiro</option>
+									<option value="2">Fevereiro</option>
+									<option value="3">Março</option>
+									<option value="4">Abril</option>
+									<option value="5">Maio</option>
+									<option value="6">Junho</option>
+									<option value="7">Julho</option>
+									<option value="8">Agosto</option>
+									<option value="9">Setembro</option>
+									<option value="10">Outubro</option>
+									<option value="11">Novembro</option>
+									<option value="12">Dezembro</option>
 								</select>
 							</div>
 							<div class="col-lg-6 col-sm-12">
@@ -125,19 +129,45 @@
 										class="form-control" name="category" id="category"
 										onChange="getGeojson()">
 										<option value="default">Selecione uma categoria</option>
-										<option value="ASSALTO">Assalto</option>
-										<option value="AMEACAS">Ameaças</option>
-										<option value="ACIDENTES">Acidentes</option>
-										<option value="CONSUMO_DE_DROGAS">Consumo de Drogas</option>
-										<option value="VEICULOS_ABERTOS">Veículos Abertos</option>
-										<option value="FURTO_DE_TERCEIROS">Furto de Terceiros</option>
-										<option value="OUTROS">Outros</option>
-									</select>
+										<option value="incendio">Incêndio</option>
+										<option value="tombamento">Tombamento</option>
+										<option value="colisao_frontal">Colisão frontal</option>
+										<option value="colisao_lateral">Colisão lateral</option>
+                                        <option value="colisao_traseira">colisão traseira</option>
+                                        <option value="colisao_transversal">Colisão transversal</option>
+										<option value="atropelamento_de_animal">Atropelamento de animal</option>
+                                        <option value="atropelamento_de_pedestre">Atropelamento de pedestre</option>
+										<option value="saida_de_leito_carrocavel">Saída de leito carroçável</option>
+										<option value="colisao_com_objeto_estatico">Colisão com objeto estático</option>
+										<option value="colisao_com_objeto_em_movimento">Colisão com objeto em movimento</option>
+								</select>
 								</div>
 							</div>
 						</div>
-						<a class="badge badge-primary" href="/#{endpoint.smartcampus_path}/predicoes/cadastro-viatura.html">Cadastrar Viaturas</a>
-                        <ul class="list-group">
+						<div class="col-lg-6 col-sm-12">
+							<div class="form-group">
+								<label for="tipo_mapa">Tipo do mapa</label> <select
+									class="form-control" name="tipoa_mapa" id="tipo_mapa"
+									onChange="getGeojson()">
+								<option value="roads">Rodovias</option>
+								<option value="mapa_normal">Estado</option>
+							</select>
+							</div>
+						</div>
+						<label for="category">Ranking</label>
+						<ul class="list-group">
+
+						</ul>
+
+
+
+
+
+
+						<!--div class="col-lg-12 col-sm-12">
+							<a class="btn btn-primary btn-lg active" role="button" href="/#{endpoint.smartcampus_path}/preditivo/cadastro-viatura.html">Cadastrar Viaturas</a>
+                        </div>
+							<ul class="list-group">
 
                         </ul>
                         <div class="container mt-5 mb-5">
@@ -149,7 +179,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div-->
 
 
                     </div>
@@ -159,6 +189,7 @@
 					<div class="card margin-top-5">
 						<div class="card-body row" id="margin-row">
 							<div class="container-fluid col-sm-12" id="pizza"></div>
+
 							<div class="container-fluid col-sm-12" id="bars" style="height: 300px"></div>
 						</div>
 					</div>
@@ -176,6 +207,8 @@
 			</div>
 		</div>
 	</div>
+
+
 	<script type="text/javascript">
 		const USER_PERMISSION = "#{authController.permission}";
 		const USER_TOKEN = "#{authController.authToken}";

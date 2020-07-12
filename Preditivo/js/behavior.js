@@ -1,5 +1,5 @@
-var endpoint = "http://localhost:8084/";
-
+//var endpoint = "http://localhost:8080/";
+endpoint = ENDPOINT_CAMPUS_SEGURO;
 function openMenu(){
 	$("#option-menu").removeClass("btn-outline-dark");
 	$("#option-menu").addClass("btn-dark");
@@ -17,7 +17,6 @@ function openEstatisticas(){
 	document.getElementById("menu").style.display = "none";
 	document.getElementById("estatisticas").style.display = "block";
 }
-
 //switch
 const toggle = document.querySelector('.toggle-input');
 const initialState = localStorage.getItem('toggleState') == 'true';
@@ -26,3 +25,13 @@ toggle.checked = initialState;
 toggle.addEventListener('change', function() {
 	localStorage.setItem('toggleState', toggle.checked);
 });
+
+//erros
+
+function temporizadorErroDados(){
+	document.getElementById("erro-dados").style.display = "none";
+}
+
+function temporizadorErroConexao(){
+	document.getElementById("erro-conexao").style.display = "none";
+}
