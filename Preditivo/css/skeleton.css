@@ -323,6 +323,3 @@ FCFCFC - stars
 .toggle-input:checked ~ .toggle-switch .toggle-switch-figureAlt {
 	transform: scale(1);
 }
-.form-group{
-	background-color: red;
-}
