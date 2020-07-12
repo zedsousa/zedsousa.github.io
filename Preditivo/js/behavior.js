@@ -1,5 +1,4 @@
-//var endpoint = "http://localhost:8080/";
-endpoint = ENDPOINT_CAMPUS_SEGURO;
+var endpoint = "http://localhost:8080/";
 function openMenu(){
 	$("#option-menu").removeClass("btn-outline-dark");
 	$("#option-menu").addClass("btn-dark");

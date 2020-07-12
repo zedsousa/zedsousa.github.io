@@ -1,5 +1,5 @@
-//var endpoint = "http://localhost:8080/";
-endpoint = ENDPOINT_CAMPUS_SEGURO;
+var endpoint = "http://localhost:8080/";
+
 
 var date = new Date();
 var year = date.getFullYear();

@@ -1,4 +1,4 @@
-endpoint = ENDPOINT_CAMPUS_SEGURO;
+var endpoint = "http://localhost:8080/";
 
 function gerarGraficoPizza(dia) {
     var date = new Date();

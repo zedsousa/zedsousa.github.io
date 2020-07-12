@@ -1,5 +1,4 @@
-//var endpoint = "http://localhost:8080/";
-endpoint = ENDPOINT_CAMPUS_SEGURO;
+var endpoint = "http://localhost:8080/";
 var setores, predicao, municipios, mapa_normal;
 var tipo_mapa = 'roads';
 var mapPredicao = L.geoJson();
