@@ -58,15 +58,25 @@ function setShift(){
     //gerarGraficoBarras();
     getGeojson();
 }
-
-function gerar_predicao(){
+function mostraBolinha(){
     var loading = document.querySelector("#preload");
-    loading.style.display = 'block';
+    loading.style.display = "block"
+}
+function escondeBolinha(){
+    var loading = document.querySelector("#preload");
+    loading.style.display = "none"
+}
+function gerar_predicao(){
+    
+    mostraBolinha();
     gerarGraficoPizza();
     gerarGraficoBarras();
     getGeojson();
-    loading.style.display = 'none';
+    escondeBolinha();
 }
+
+
+
 
 
 
