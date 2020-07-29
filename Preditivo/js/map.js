@@ -98,6 +98,36 @@ function getGeojson() {
 
 
     //xmlHttp.open("GET", endpoint+"preditivo/get-prediction/"+category+"@"+shift+"/"+year+"/"+month+"/map", false); // false for synchronous request
+    xmlHttp.open("GET", endpoint+"get_program_card/"+category, false); // false for synchronous request
+    xmlHttp.send(null);
+    var response3 = JSON.parse(xmlHttp.response);
+
+    //cartao programa
+    var timeline = document.querySelector(".timeline");
+    var horas  = response3.cartao_programa[0];
+    for (var i =0; i<23; i++){
+	    if (horas[i]!="0"){
+		    var eventoElement = document.createElement('li');
+		    var setorText = document.createTextNode(horas[i]);
+		var setorElement = document.createElement('a');
+		var horaText = document.createTextNode(i+"h00");
+		var horaElement = document.createElement('a');
+
+		setorElement.setAttribute('href', '#');
+		horaElement.setAttribute('href', '#');
+
+		setorElement.appendChild(setorText);
+		horaElement.appendChild(horaText);
+
+		horaElement.setAttribute("class", "float-right")
+		eventoElement.appendChild(setorElement);
+		eventoElement.appendChild(horaElement);
+		timeline.appendChild(eventoElement);
+
+	}
+
+}
+
     xmlHttp.open("GET", endpoint+"new_get_contour/"+category+"@"+shift+"/"+year+"/"+month+"/map", false); // false for synchronous request
     xmlHttp.send(null);
     var response2 = JSON.parse(xmlHttp.response);
