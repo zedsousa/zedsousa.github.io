@@ -1,65 +1,32 @@
-# [Start Bootstrap - SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/)
+# Tatika
+### Serviço utilizado para consultar informações sobre ações da bolsa de valores por meio da API Yahoo Finance
 
-[SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+O serviço utiliza a API Yahoo Finance para obter dados sobre as ações, para então analisar elas utilizando a biblioteca pandas.
+Uma das principais análises feita pelo serviço é a taxa de variação de uma ação por dia, que exibe de forma estatística a a taxa de ocorrência de uma determinada variação nos dias análisados.
 
-For the legacy Bootstrap 3 version of this theme, you can view the [last stable release](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2/releases/tag/v3.3.7%2B1) of SB Admin 2 for Bootstrap 3.
+#### Exemplo de análise com a ação BKBR3
 
-## Preview
+DATA          | ABERTURA | MÍNIMO | MÁXIMO 
+------------  | -------- | --------- | ----- 
+26/05/2020	  | 10.70	| 10.70 | 11.94
+25/05/2020	  | 9.88	| 9.47	| 10.29
+22/05/2020	  | 9.81  | 9.17  | 10.03	 
+21/05/2020	  | 9.89	| 9.71  | 10.24 
+20/05/2020	  | 9.95	| 9.59  | 9.95 
+19/05/2020	  | 9.47	| 9.36  | 9.97
+18/05/2020	  | 9.07	| 8.82  | 9.84	
+15/05/2020	  | 8.20	| 8.19  | 8.93
+14/05/2020	  | 8.15	| 8.03	| 8.61
+13/05/2020	  | 8.90	| 8.17	| 9.08	
 
-[![SB Admin 2 Preview](https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.png)](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)
 
-**[Launch Live Preview](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)**
+Nesse exemplo temos dados de 10 dias da ação BKBR3. <br>
+Após algumas manipulações utilizando o pandas, temos o seguinte resultado:
 
-## Status
+Em 75% dos dias analisados a ação chega a valorizar 2.07% e/ou desvalorizar 1.56% <br>
+Em 50% dos dias analisados a ação chega a valorizar 3.94% e/ou desvalorizar 3.25% <br>
+Em 25% dos dias analisados a ação chega a valorizar 7.51% e/ou desvalorizar 6.30% <br>
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-sb-admin-2/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-sb-admin-2.svg)](https://www.npmjs.com/package/startbootstrap-sb-admin-2)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-sb-admin-2.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-sb-admin-2)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin-2/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin-2)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin-2/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin-2?type=dev)
+Com isso o investidor tem uma noção de como costuma ser o comportamento da ação em análise.
 
-## Download and Installation
 
-To begin using this template, choose one of the following options to get started:
-
--   [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/sb-admin-2/)
--   Install via npm: `npm i startbootstrap-sb-admin-2`
--   Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-sb-admin-2.git`
--   [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2)
-
-## Usage
-
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
-
-### Gulp Tasks
-
--   `gulp` the default task that builds everything
--   `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
--   `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
--   `gulp js` minifies the themes JS file
--   `gulp vendor` copies dependencies from node_modules to the vendor directory
-
-You must have npm installed globally in order to use this build environment. This theme was built using node v11.6.0 and the Gulp CLI v2.0.1. If Gulp is not running properly after running `npm install`, you may need to update node and/or the Gulp CLI locally.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/sb-admin-2/).
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
--   <https://startbootstrap.com>
--   <https://twitter.com/SBootstrap>
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
-
--   <http://davidmiller.io>
--   <https://twitter.com/davidmillerskt>
--   <https://github.com/davidtmiller>
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.
