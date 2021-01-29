@@ -30,8 +30,8 @@
 
 })(jQuery); // End of use strict
 
-function changeArrow(){
-  arrow = document.getElementById('aluraArrow');
+function changeArrow(id){
+  arrow = document.getElementById(id);
   if(arrow.className=='fas fa-chevron-right'){
     arrow.className = 'fas fa-chevron-down';
   }
